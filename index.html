@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reelcares | Experience Excellence</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080b16;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+header {
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(8,11,22,0.95);
+    border-bottom: 1px solid #20263c;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #a78bfa;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a78bfa;
+}
+
+.hero {
+    min-height: 620px;
+    padding: 130px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+    radial-gradient(circle at 80% 30%, #35206c 0%, transparent 35%),
+    radial-gradient(circle at 10% 90%, #123b68 0%, transparent 35%),
+    #080b16;
+}
+
+.tag {
+    color: #a78bfa;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 75px);
+    line-height: 1.15;
+    max-width: 800px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #a78bfa;
+}
+
+.hero p {
+    color: #b7bfd1;
+    max-width: 600px;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #7c3aed, #2563eb);
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px #5b21b655;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+.section-label {
+    color: #a78bfa;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+section h2 {
+    font-size: 38px;
+    margin: 12px 0 20px;
+}
+
+.about p {
+    max-width: 750px;
+    color: #aeb8ca;
+}
+
+.services {
+    background: #0d1222;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 35px 25px;
+    background: linear-gradient(145deg, #171d32, #101526);
+    border: 1px solid #29304b;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #8b5cf6;
+}
+
+.card .number {
+    color: #a78bfa;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    font-size: 21px;
+}
+
+.card p {
+    color: #aeb8ca;
+    font-size: 14px;
+}
+
+.contact {
+    text-align: center;
+    background:
+    radial-gradient(circle at center, #24174b, transparent 65%),
+    #080b16;
+}
+
+.contact p {
+    color: #b7bfd1;
+    margin: 12px 0;
+}
+
+.contact a:not(.btn) {
+    color: #a78bfa;
+    text-decoration: none;
+}
+
+.contact .btn {
+    margin-top: 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: #050711;
+    border-top: 1px solid #20263c;
+    color: #8892a8;
+    font-size: 13px;
+}
+
+.whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    background: #16a34a;
+    color: white;
+    text-decoration: none;
+    padding: 13px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    z-index: 200;
+    box-shadow: 0 5px 20px #16a34a55;
+}
+
+@media(max-width:650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 90px 7%;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Reelcares.</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<div class="hero" id="home">
+
+    <div class="tag">Welcome to Reelcares</div>
+
+    <h1>
+        Discover a Better<br>
+        <span>Digital Experience.</span>
+    </h1>
+
+    <p>
+        Welcome to Reelcares. We are focused on quality,
+        reliability and creating valuable experiences
+        for our customers.
+    </p>
+
+    <div>
+        <a href="#contact" class="btn">Get In Touch →</a>
+    </div>
+
+</div>
+
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
+
+    <div class="section-label">Who We Are</div>
+
+    <h2>About Reelcares</h2>
+
+    <p>
+        Reelcares is committed to delivering quality,
+        building trust and creating positive customer
+        experiences. We believe in professionalism,
+        reliability and continuous improvement.
+        Our goal is to provide value and build lasting
+        relationships with our customers.
+    </p>
+
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="services" id="services">
+
+    <div class="section-label">What We Offer</div>
+
+    <h2>Our Commitment</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="number">01</div>
+            <h3>Quality</h3>
+            <p>
+                We focus on quality and delivering
+                services that meet customer expectations.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="number">02</div>
+            <h3>Reliability</h3>
+            <p>
+                We value trust and aim to provide
+                dependable customer experiences.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="number">03</div>
+            <h3>Support</h3>
+            <p>
+                We are available to receive enquiries
+                and assist our customers.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="number">04</div>
+            <h3>Excellence</h3>
+            <p>
+                We believe in improvement, professionalism
+                and creating value.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+
+    <div class="section-label">Let's Connect</div>
+
+    <h2>Get In Touch</h2>
+
+    <p>Have a question? Contact Reelcares today.</p>
+
+    <p><strong>Phone:</strong> 08107066755</p>
+
+    <p>
+        <strong>Email:</strong>
+        <a href="mailto:emesdimadu@gmail.com">
+        emesdimadu@gmail.com</a>
+    </p>
+
+    <p><strong>Location:</strong> Nigeria</p>
+
+    <a class="btn"
+       href="https://wa.me/2348107066755">
+       Contact Us on WhatsApp →
+    </a>
+
+</section>
+
+<footer>
+    <p>© 2026 Reelcares. All Rights Reserved.</p>
+    <p>Designed with excellence.</p>
+</footer>
+
+<a class="whatsapp"
+   href="https://wa.me/2348107066755">
+   WhatsApp
+</a>
+
+</body>
+</html>
